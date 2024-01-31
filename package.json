@@ -1,0 +1,11 @@
+{
+  "name": "contact-management",
+  "version": "1.0.0",
+  "description": "This project exists to be a better solution for managing Campus Fellowship contact forms. This might never see the light of day but I am bored and interested",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Evan Krueger",
+  "license": "ISC"
+}
