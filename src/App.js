@@ -1,18 +1,28 @@
-import './App.css';
+import { createBrowserRouter, Route, createRoutesFromElements, RouterProvider } from "react-router-dom";
 
-//App is the root component that contains all of the others
+// pages
+import Home from "./pages/Home";
+import Drake from "./pages/Drake";
+import Grandview from "./pages/Grandview";
+import Dmacc from "./pages/Dmacc";
 
-//Functional components and class components:
-//Fucntional components are js functions that return html to describe
-//the ui
-//
-//Class Components are things that extend the component class
-//These have to use the render method 
+// layouts
+import RootLayout from "./layouts/RootLayout";
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path = "/" element={<RootLayout />}>
+      <Route index element={<Home />}/>
+      <Route path="drake" element={<Drake />}/>
+      <Route path="grandview" element={<Grandview />}/>
+      <Route path="dmacc" element={<Dmacc />}/>
+    </Route>
+  )
+)
+
 function App() {
   return (
-    <div className="App">
-      <h1>Hello</h1>
-    </div>
+    <RouterProvider router={router}/>
   );
 }
 
